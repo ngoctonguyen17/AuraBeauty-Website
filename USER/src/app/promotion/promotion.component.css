@@ -1,0 +1,423 @@
+.promotion-banner {
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+  }
+  
+  /* Countdown Section Styling with Glowing Border */
+  .countdown-section {
+    margin-top:95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    height: 600px; /* hoặc chiều cao bạn mong muốn */
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: glow-border 2s infinite alternate;
+    overflow: hidden;
+}
+
+  
+  .fireworks-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/images/Promotion/bg.png') center center / cover no-repeat; /* Căn giữa và điều chỉnh kích thước ảnh */
+    opacity: 0.8;
+    z-index: 0;
+}
+
+  /* Glowing Border Animation */
+  @keyframes glow-border {
+    from {
+      box-shadow: 0 0 10px rgba(255, 120, 79, 0.8);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 120, 79, 1);
+    }
+  }
+
+  .best-deal-ribbon {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    background: #ffdb58;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 15px;
+    transform: rotate(-45deg);
+    font-size: 0.8em;
+    z-index: 1;
+  }
+  
+  .countdown-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    z-index: 1;
+  }
+  
+  .countdown-section h2 {
+    font-size: 4.5rem; /* Thay đổi kích thước phù hợp */
+    font-weight: bold; /* Có thể tăng độ đậm nếu muốn */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .countdown-section p {
+    font-size: 1.5rem; /* Thay đổi kích thước phù hợp */
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .voucher-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    justify-items: center; /* Center vouchers horizontally */
+  }
+  
+  .voucher-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fd906e; /* Main voucher color */
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 90%; /* Make vouchers responsive */
+    max-width: 300px;
+    transition: transform 0.2s;
+  }
+  
+  .voucher-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .voucher-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .voucher-logo {
+    background-color: #ff784f; /* Voucher logo background */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .voucher-details {
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .voucher-details strong {
+    font-size: 1.2em;
+  }
+  
+  .voucher-details p {
+    margin: 2px 0;
+    font-size: 0.9em;
+  }
+  
+  .voucher-item::before,
+  .voucher-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .voucher-item::before {
+    left: -10px;
+  }
+  
+  .voucher-item::after {
+    right: -10px;
+  }
+  
+  .save-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #fd906e;
+    border: 2px solid #fd906e;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #d37a5f;
+    color: #fff;
+  }
+  
+  @media (max-width: 992px) {
+    .voucher-list {
+      grid-template-columns: repeat(2, 1fr); /* Two vouchers per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .voucher-list {
+      grid-template-columns: 1fr; /* One voucher per row on small screens */
+    }
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-2px); }
+        50% { transform: translateX(2px); }
+        75% { transform: translateX(-2px); }
+      }
+      
+  }
+  
+  .cta-banner {
+    background-color: #c27676;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    margin-top: 100px;
+  }
+  
+  .cta-banner a {
+    color: #ffdb58;
+    text-decoration: underline;
+    margin: 0 5px;
+  }
+  
+  .cta-banner a:hover {
+    color: #ffd700;
+  }
+
+  * { font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.promotion-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffc107;
+    padding: 20px;
+}
+
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 130px;
+  background: linear-gradient(135deg, #ffe4e4 0%, #ffcc80 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  max-width: 50%;
+  padding-left: 100px;
+  text-align: left;
+  color: #333;
+}
+
+.banner-content h1 {
+  font-size: 65px;
+  font-weight: bold;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  margin: 20px 0;
+  color: #333;
+}
+
+.read-more {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more:hover {
+  background-color: #ff8a65;
+}
+
+.banner-image img {
+  max-width: 700px;
+  position: absolute;
+  left: 1000px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Promo Cards Section */
+.promo-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.promo-card {
+  background-color: #ffe4e4;
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.promo-card .card-icon img {
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+.promo-card h3 {
+  font-size: 22px;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details-btn {
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: #ff8a65;
+}
+
+.vouchers-section h1 {
+  font-size: 50px;
+  color: #ff6f00;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.flashsale-section {
+  display: flex;
+  margin: 50px;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffe4e4 0%, #ffcc80 100%);
+  font-family: Arial, sans-serif;
+}
+
+.hour-box {
+  width: 100px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c27676;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.hour-box:hover {
+  transform: scale(1.1);
+}
+
+.highlight {
+  background-color: #ffb74c; /* Màu nền nổi bật */
+  border: 2px solid #fff; /* Viền trắng cho nổi bật */
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:100px;
+}
+
+.product-item {
+  background-color: #ffcc80;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.best-seller-ribbon {
+  position: absolute;
+  bottom: -60px; /* Thay đổi vị trí để phù hợp với góc ảnh */
+  left: -60px; /* Thay đổi vị trí để phù hợp với góc ảnh */
+  width: 150px; /* Chiều rộng của ribbon */
+  height: 150px; /* Chiều cao của ribbon */
+  background-image: url('../../assets/images/Promotion/bestseller.png'); /* Đường dẫn đến hình ảnh ribbon */
+  background-size: cover; /* Đảm bảo hình ảnh phủ đầy phần tử */
+  color: white; /* Màu chữ */
+  text-align: center; /* Căn giữa nội dung */
+  line-height: 30px; /* Căn giữa nội dung theo chiều dọc */
+  border-radius: 5px; /* Bo tròn góc */
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

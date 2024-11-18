@@ -1,0 +1,27 @@
+<div class="bg-[#ffe3e3]">
+  <form [formGroup]="adloginForm" class="flex items-center justify-center w-full h-screen">
+    <div class="bg-[#ffffff] w-11/12 lg:w-5/12 p-8 rounded-2xl shadow-2xl border">
+      <img src="../../assets/images/Logo/Logo-text-Mau.png">
+      <h1 class="text-4xl text-[#333] font-bold mb-6 text-center">Admin Login</h1>
+
+      <div class="mb-5">
+        <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+        <input formControlName="email" type="email" id="email"
+          class="w-full px-4 py-3 text-sm font-medium rounded-full bg-[#D9D9D9] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#c27676] focus:border-transparent"
+          placeholder="Enter your Email" required>
+      </div>
+
+      <div class="mb-5">
+        <label for="password" class="block text-sm font-semibold mb-1">Password</label>
+        <input formControlName="password" type="password" id="password"
+          class="w-full px-4 py-3 text-sm font-medium rounded-full bg-[#D9D9D9] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#c27676] focus:border-transparent"
+          placeholder="Enter your Password" required>
+      </div>
+
+      <button (click)="adlogin()"
+        class="w-full py-3 font-medium text-white bg-[#c27676] hover:bg-[#d25747] rounded-full transition duration-300 ease-in-out shadow-md hover:shadow-lg">
+        Login
+      </button>
+    </div>
+  </form>
+</div>

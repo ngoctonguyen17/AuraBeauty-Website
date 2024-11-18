@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+<form [formGroup]="loginForm">
+  <div class="background-container">
+    <div class="login-container">
+      <h1 class="login-title">Login</h1>
+      <p class="login-welcome">Welcome back! Please log in to access your account</p>
+
+      <div class="input-group">
+        <label for="email" class="input-label">Email</label>
+        <input formControlName="email" type="email" id="email" class="input-field" placeholder="Enter your Email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password" class="input-label">Password</label>
+        <input formControlName="password" type="password" id="password" class="input-field" placeholder="Enter your Password" required>
+      </div>
+
+      <div class="forgot-password">
+        <a routerLink="/forget-pw" class="forgot-password-link">Forget Password?</a>
+      </div>
+
+      <button (click)="login()" class="login-button">Login</button>
+
+      <p class="signup-message">
+        <span class="signup-text">Don't have an account?</span>
+        <a routerLink="/signup" class="signup-link">Sign up</a>
+      </p>
+    </div>
+  </div>
+</form>
+=======
+<div class="login-container">
+    <div class="login-form"> 
+        <h1>{{ isLoginForm ? 'Đăng nhập' : 'Đăng ký' }}</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required [(ngModel)]="email" name="email">
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form-group" *ngIf="!isLoginForm">
+                <input type="text" id="name" placeholder=" " required [(ngModel)]="name" name="name">
+                <label for="name">Họ và tên</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder=" " required [(ngModel)]="password" name="password">
+                <label for="password">Mật khẩu</label>
+            </div>
+            <div class="form-group" *ngIf="!isLoginForm">
+                <input type="password" id="confirmPassword" placeholder=" " required [(ngModel)]="confirmPassword"
+                    name="confirmPassword">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+            </div>
+            <button type="submit" class="submit-button">{{ isLoginForm ? 'Đăng nhập' : 'Đăng ký' }}</button>
+            <div class="links">
+                <a href="#" id="forgotPassword">Quên mật khẩu?</a>
+                <a (click)="toggleForm()">{{ isLoginForm ? 'Tạo tài khoản' : 'Đăng nhập' }}</a>
+            </div>
+        </form>
+    </div>
+</div>
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4

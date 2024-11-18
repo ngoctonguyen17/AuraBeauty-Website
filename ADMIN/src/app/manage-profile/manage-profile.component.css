@@ -1,0 +1,14 @@
+.label {
+  display: block;
+  margin-top: 10px;
+  color: #070707;
+  font-size: 40px;
+  font-weight: bold;
+  transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.label:hover {
+  color: #ff4081; /* Change color on hover */
+  font-size: 42px; /* Slightly larger font size on hover */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}

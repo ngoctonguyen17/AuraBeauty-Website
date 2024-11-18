@@ -1,0 +1,72 @@
+<div class="homepage">
+  <div><app-header></app-header></div>
+  <div>
+
+    <div class="flash-sale">
+      <button (click)="prevBanner()" class="arrow-button left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <img [src]="banners[currentBannerIndex]?.image" [alt]="banners[currentBannerIndex]?.alt" class="banner-image" />
+      <button (click)="nextBanner()" class="arrow-button right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="our-products">
+    <h1 style="margin-bottom: 20px;">Our Products</h1>
+    <div class="product-categories">
+      <div class="category">
+        <img src="../../assets/images/Product/Haircare.png" alt="Haircare">
+        <h3>Haircare</h3>
+      </div>
+      <div class="category">
+        <img src="../../assets/images/Product/Bodycare.png" alt="Bodycare">
+        <h3>Bodycare</h3>
+      </div>
+      <div class="category">
+        <img src="../../assets/images/Product/Skincare.png" alt="Skincare">
+        <h3>Skincare</h3>
+      </div>
+      <div class="category">
+        <img src="../../assets/images/Product/Makeup.png" alt="Makeup">
+        <h3>Makeup</h3>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="partner-section">
+    <h1>Our Collaborations</h1>
+    <p style="text-align: center;">We proudly collaborate with over <strong>10+</strong> trusted brands, reaching
+      <strong>1000+</strong> customers!
+    <div class="partner">
+      <div *ngFor="let partner of partners | slice: 0:visibleBrandCount" class="partner-card">
+        <img [src]="partner.image" alt="Brand Logo" class="brand-logo" />
+      </div>
+    </div>
+    <div *ngIf="partners.length > 5" class="toggle-button">
+      <button (click)="toggleVisibilityBrand()" class="see-more">
+        {{ showAllBrand ? 'See Less' : 'See More' }}
+      </button>
+    </div>
+  </div>
+  <div class="customer-reviews">
+    <h1>Customer Reviews</h1>
+    <div class="reviews">
+      <div *ngFor="let review of reviews | slice: 0:visibleReviewsCount" class="review-card">
+        <img [src]="review.image" alt="Customer Image" class="customer-image" />
+        <div class="review-content">
+          <h4 class="review-name"><strong>{{ review.name }}</strong></h4>
+          <p class="review-text">{{ review.text }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="reviews.length > 4" class="toggle-button">
+      <button (click)="toggleVisibility()" class="see-more">
+        {{ showAll ? 'See Less' : 'See More' }}
+      </button>
+    </div>
+  </div>
+</div>

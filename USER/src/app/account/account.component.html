@@ -1,0 +1,73 @@
+<!-- account.component.html -->
+<div class="account-container">
+    <div class="account-menu">
+        <div class="user-info">
+            <h2>Hi, {{userName}}</h2>
+        </div>
+        <ul class="menu-items">
+            <li [class.active]="activeTab === 'info'" (click)="setActiveTab('info')">
+                <span class="material-icons"></span>
+                Thông tin tài khoản
+            </li>
+            <li [class.active]="activeTab === 'orders'" (click)="setActiveTab('orders')">
+                <span class="material-icons"></span>
+                Lịch sử mua hàng
+            </li>
+            <li [class.active]="activeTab === 'addresses'" (click)="setActiveTab('addresses')">
+                <span class="material-icons"></span>
+                Danh sách địa chỉ
+            </li>
+            <li (click)="logout()">
+                <span class="material-icons"></span>
+                Đăng xuất
+            </li>
+        </ul>
+    </div>
+
+    <div class="account-content">
+        <div [ngSwitch]="activeTab">
+            <div *ngSwitchCase="'info'" class="tab-content">
+                <h2>Thông tin tài khoản</h2>
+                <div class="info-group">
+                    <label>Họ và tên:
+                        <span class="info-value">{{userInfo.fullName}}</span>
+                    </label>
+                </div>
+                <div class="info-group">
+                    <label>Email:
+                        <span class="info-value">{{userInfo.email}}</span>
+                    </label>
+                </div>
+                <div class="info-group">
+                    <label>Mật khẩu:
+                        <span class="password-field">
+                            <input [type]="showPassword ? 'text' : 'password'" [value]="userInfo.password" readonly>
+                            <span class="toggle-password" (click)="togglePassword()">
+                                <i [class]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                            </span>
+                        </span>
+                    </label>
+                </div>                
+            </div>
+
+            <div *ngSwitchCase="'orders'" class="tab-content">
+                <h2>Lịch sử mua hàng</h2>
+                <div class="empty-message">
+                    Bạn chưa đặt mua sản phẩm nào!
+                </div>
+            </div>
+
+            <div *ngSwitchCase="'addresses'" class="tab-content">
+                <h2>Danh sách địa chỉ</h2>
+                <div class="info-group">
+                    <label>Địa chỉ:
+                        <span class="info-value">{{addresses.address}}</span>
+                    </label>
+                    <label>Số điện thoại:
+                        <span class="info-value">{{addresses.phone}}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

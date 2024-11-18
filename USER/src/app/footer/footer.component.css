@@ -1,0 +1,169 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer {
+  background-color: #fff3f3;
+  position: flex;
+  color: #333;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr); /* Logo column takes 2 parts, others take 1 part each */
+  gap: 80px;
+  align-items: start;
+  padding: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer-logo {
+  text-align: left;
+  width: 100%;
+}
+
+
+.footer-logo img {
+  width: 300px;
+  height: auto;
+}
+
+.footer-nav h3 {
+  color: #c27676;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #c27676;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li {
+  margin: 10px 0;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footer-nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #c27676;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.footer-nav ul li a:hover::after {
+  width: 100%;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer-icons a {
+  color: #333;
+  margin-right: 15px;
+  font-size: 1.4em;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #c27676;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: auto;
+  padding-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #c27676;
+}
+
+th {
+  background-color: #c27676;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background-color: #ffe3e3;
+  color: #333;
+  vertical-align: top;
+
+}
+
+tr:hover {
+  background-color: #f5c8c8;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-nav h3 {
+    font-size: 1.3em;
+  }
+
+  .footer-icons {
+    flex-direction: column;
+  }
+
+  .footer-icons a {
+    margin-left: 0;
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #c27676;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}

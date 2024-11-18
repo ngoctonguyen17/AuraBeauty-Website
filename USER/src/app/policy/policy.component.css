@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.policy-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    padding-top: 100px; /* Thay đổi để đẩy thông tin xuống 100px */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+<<<<<<< HEAD
+    color: #c27676; /* Màu cho tiêu đề chính */
+=======
+    color: #e03f3f; /* Màu cho tiêu đề chính */
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4
+}
+
+h2 {
+    color: #c27676;
+    font-size: 1.9em; /* Kích thước tiêu đề phụ */
+<<<<<<< HEAD
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+p, li, ul {
+=======
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4
+    text-align: justify;
+    color: #333; /* Màu chữ cho nội dung */
+}
+
+.policy-section {
+    display: flex; /* Sử dụng Flexbox để tạo bố cục hai cột */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    margin-bottom: 20px;
+<<<<<<< HEAD
+    background-color: #ffffff; /* Màu nền cho mỗi phần chính sách */
+    border-radius: 8px;
+    padding: 15px;
+    scroll-margin-top: 580px;
+=======
+    background-color: #fff3f3; /* Màu nền cho mỗi phần chính sách */
+    border-radius: 8px;
+    padding: 15px;
+    scroll-margin-top: 580px; 
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+/* Hiệu ứng hover cho phần chính sách */
+.policy-section:hover {
+<<<<<<< HEAD
+    background-color: #fff3f3; /* Đổi màu nền khi hover */
+=======
+    background-color: #ffe6e6; /* Đổi màu nền khi hover */
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4
+    transform: translateY(-5px); /* Nâng lên một chút khi hover */
+}
+
+.section-image {
+    width: 500px; /* Kích thước cố định cho ảnh */
+    height: 200px; /* Kích thước cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+    border-radius: 8px; /* Bo góc cho ảnh */
+    margin-left: 20px; /* Khoảng cách giữa ảnh và nội dung */
+}
+
+/* Nội dung sẽ chiếm không gian còn lại */
+.section-content {
+    flex: 1; /* Chiếm không gian còn lại */
+    padding: 30px; /* Khoảng cách bên trong cho nội dung */
+    margin-bottom: 15px; /* Khoảng cách giữa nội dung và ảnh */
+}
+
+/* Thêm hiệu ứng hover cho ảnh */
+.section-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Đảo ngược vị trí ảnh và nội dung cho các mục xen kẽ */
+.policy-section:nth-child(odd) {
+    flex-direction: row; /* Ảnh bên trái, nội dung bên phải */
+}
+
+.policy-section:nth-child(even) {
+    flex-direction: row-reverse; /* Ảnh bên phải, nội dung bên trái */
+}

@@ -1,0 +1,116 @@
+/* styles.css (or your component-specific style file) */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+h1 {
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #070707;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  width: 500px;
+  margin: 0 auto;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+
+button {
+  background-color: #c27676;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+button-clear {
+  background-color: #aaaaaa;
+  color: #000000;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #c27676;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+
+  font-size:16px;
+}
+
+
+th {
+  background-color: #c27676;
+  color: #fff;
+  font-size:20px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+
+button {
+  background-color: #c27676;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #8d2f2f;
+}
+
+
+
+
+

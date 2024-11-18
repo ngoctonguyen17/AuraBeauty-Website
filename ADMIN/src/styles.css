@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif; /* Áp dụng font Quicksand cho toàn bộ body */
+  background-color: #ffffff;
+}
+
+.font-normal {
+  font-family: 'Quicksand', sans-serif; /* Sử dụng font Quicksand cho lớp cụ thể */
+}
+
+.font-custom {
+  font-family: 'BDLifelessGrotesk', cursive;
+}

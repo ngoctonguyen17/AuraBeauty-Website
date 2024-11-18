@@ -1,0 +1,65 @@
+<div class="cart-container">
+  <div class="cart-header">
+    <h1 class="cart-title">Shopping Cart</h1>
+  </div>
+
+  <!-- Repeat this div for each item in the cart -->
+  <div class="cart-item">
+    <div class="item-info">
+      <img src="../../assets/images/Product/Product (2).png" alt="Product Image" class="product-image">
+      <div class="product-description">
+        <span class="product-name">Tinh chất dưỡng tóc Cocoon</span>
+      </div>
+    </div>
+    <div class="item-quantity">
+      <input type="number" class="quantity-input" min="1" value="1">
+    </div>
+    <div class="item-price">
+      <span class="original-price discount-price">200,000</span> <!-- Giá gốc có gạch ngang -->
+      <span class="discounted-price">&nbsp;&nbsp;&nbsp;150,000</span> <!-- Giá sau khi giảm -->
+    </div>
+    <button class="remove-btn">REMOVE</button>
+  </div>
+
+  <div class="cart-item">
+    <div class="item-info">
+      <img src="../../assets/images/Product/Product (4).png" alt="Product Image" class="product-image">
+      <div class="product-description">
+        <span class="product-name">Gel rửa mặt Simple</span>
+      </div>
+    </div>
+    <div class="item-quantity">
+      <input type="number" class="quantity-input" min="1" value="1">
+    </div>
+    <div class="item-price">
+      <span class="original-price">150,000</span> <!-- Giá gốc không có gạch ngang -->
+    </div>
+    <button class="remove-btn">REMOVE</button>
+  </div>
+
+
+  <div class="cart-total">
+    <div class="total-row">
+        <span class="total-label">Subtotal:</span>
+        <span class="subtotal-price"> 350,000 VND</span> <!-- Tổng đơn hàng trước giảm giá -->
+    </div>
+    <div class="total-row">
+        <span class="total-label">Discount:</span>
+        <span class="subtotal-price"> 50,000 VND</span> <!-- Tổng giảm giá -->
+    </div>
+    <div class="total-row">
+        <span class="total-label">Total to Pay:</span>
+        <span class="final-total-price"> 300,000 VND</span> <!-- Tổng tiền phải thanh toán -->
+    </div>
+</div>
+
+  <div class="cart-buttons">
+    <button routerLink="/payment" class="checkout-btn">Check out</button>
+    <button class="clear-cart-btn">Clear Cart</button>
+
+    <div class="horizontal-links">
+      <a routerLink="/home" class="back-to-home"><< Back to Homepage</a>
+      <a routerLink="/product" class="continue">Continue shopping >></a>
+    </div>
+  </div>
+</div>

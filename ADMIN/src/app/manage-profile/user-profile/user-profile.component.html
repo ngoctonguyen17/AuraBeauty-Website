@@ -1,0 +1,26 @@
+<div class="bg-[#ffe7e7] w-[80%] mx-auto p-8">
+  <h1 style="text-align: center; font-size: 60px; font-weight: bold;">User Management</h1>
+  <!-- Table Section -->
+  <div class="mt-8 overflow-x-auto">
+    <table class="w-full bg-white border-collapse rounded-lg shadow-md">
+      <thead class="bg-pink-100">
+        <tr>
+          <th class="px-4 py-2 text-left">Full Name</th>
+          <th class="px-4 py-2 text-left">Email</th>
+          <th class="px-4 py-2 text-left">Contact</th>
+          <th class="px-4 py-2 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of nonAdmins" class="border-b hover:bg-pink-50">
+          <td class="px-4 py-2">{{ user.fullName }}</td>
+          <td class="px-4 py-2">{{ user.email }}</td>
+          <td class="px-4 py-2">{{ user.contact }}</td>
+          <td class="px-4 py-2 space-x-2">
+            <button (click)="deleteUser(user._id)" class="px-3 py-1 bg-[#ffe7e7] text-black rounded-lg hover:bg-red-600">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

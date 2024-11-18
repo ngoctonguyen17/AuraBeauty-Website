@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-container h1 {
+  font-size: 2em;
+  color: #c27676;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.map-container {
+  flex: 1 1 45%;
+}
+
+.contact-details-form {
+  flex: 1 1 45%;
+}
+
+.contact-info {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.contact-info h3 {
+  color: #523333;
+  text-align: justify;
+}
+
+.contact-info p {
+  font-size: 0.95em;
+  text-align: justify;
+  text-align: justify;
+}
+.contact-info ul, ol, li {
+  font-size: 0.95em;
+  margin: 10px;
+  text-align: justify;
+  text-align: justify;
+}
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #1f1f1f;
+  text-align: justify;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: justify;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #c27676;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact-form button:hover {
+  background-color: #6a4a4a;
+}
+h3 {
+  color: #523333;
+  margin-bottom: 10px;
+  font-size: 35px;
+  text-align: justify;
+}

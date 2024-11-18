@@ -1,0 +1,252 @@
+<<<<<<< HEAD
+
+/* styles.css */
+
+/* Background Container */
+.background-container {
+  background-color: rgba(248, 248, 248, 0.61); /* Light gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Login Container */
+.login-container {
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0; /* Light border */
+  width: 90%; /* Adjust for responsiveness */
+  max-width: 400px; /* Maximum width */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Title */
+.login-title {
+  font-size: 2.25rem; /* Large title */
+  color: #333; /* Dark text */
+  font-weight: bold;
+  margin-bottom: 20px; /* Spacing below title */
+}
+
+/* Welcome Message */
+.login-welcome {
+  margin-bottom: 20px; /* Spacing below welcome message */
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 15px; /* Spacing between input groups */
+}
+
+/* Label */
+.input-label {
+  margin-bottom: 5px;
+  font-size: 0.875rem; /* Medium text */
+  display: block; /* Block display for proper spacing */
+}
+
+/* Input Field */
+.input-field {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside input */
+  font-size: 0.875rem; /* Medium text */
+  border-radius: 20px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+  background-color: #d9d9d9; /* Light background */
+}
+
+/* Forgot Password */
+.forgot-password {
+  text-align: right; /* Align to the right */
+  margin-bottom: 10px; /* Spacing below link */
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  font-size: 0.875rem; /* Medium text */
+  color: #007bff; /* Default link color */
+  transition: color 0.3s;
+}
+
+.forgot-password-link:hover {
+  color: #d02007; /* Hover color */
+}
+
+/* Login Button */
+.login-button {
+  width: 100%; /* Full width */
+  padding: 12px; /* Button padding */
+  font-size: 1rem; /* Font size */
+  color: white; /* White text */
+  background-color: #d02007; /* Button color */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+  background-color: #d25747; /* Hover color */
+}
+
+/* Signup Message */
+.signup-message {
+  margin-top: 10px; /* Margin above message */
+}
+
+/* Signup Text */
+.signup-text {
+  font-size: 0.875rem; /* Medium text */
+}
+
+/* Signup Link */
+.signup-link {
+  color: #d02007; /* Link color */
+  transition: color 0.3s;
+}
+
+.signup-link:hover {
+  color: #d02007; /* Hover link color */
+}
+=======
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.login-container {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.login-form {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+    height: 100%;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #f8f8f8;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff3f3;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #c27676;
+    background-color: #ffe3e3;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 0 4px;
+    color: #c27676;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 12px;
+    background-color: #ffffff;
+    padding: 0 8px;
+    border-radius: 10px;
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #c27676;
+    font-weight: 700;
+}
+
+.submit-button {
+    background-color: #c27676;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #b56767;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    color: #c27676;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.links a:hover {
+    color: #b56767;
+    text-decoration: underline;
+}
+
+.register-fields {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.register-fields.active {
+    display: block;
+    opacity: 1;
+}
+
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4

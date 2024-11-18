@@ -1,0 +1,258 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #ffe3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure full height for centering */
+}
+
+/* Cart container styles */
+.cart-container {
+  font-family: 'Quicksand', sans-serif;
+  width: 50%;
+  background-color: #fffefe;
+  border: 1px solid #ffd6d6;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 110px auto 20px; /* Center with auto margins */
+}
+
+/* Cart header styles */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-title h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #c27676;
+}
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #c27676;
+}
+
+/* Alert box styles */
+.alert {
+  background-color: #ffebcc;
+  color: #a35d00;
+  padding: 10px;
+  margin: 15px 0;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Cart details styles */
+.cart-details-header,
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-details-header span,
+.cart-item div,
+.cart-item button {
+  flex: 1;
+  font-weight: bold;
+}
+
+/* Item information layout */
+.item-info {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  gap: 20px; /* Reduced gap for better alignment */
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+}
+
+.product-description {
+  text-align: left;
+  width: 200px;
+}
+
+.product-name {
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+}
+
+.product-category {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Quantity controls */
+.item-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.quantity-btn {
+  width: 40px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* Price display */
+.item-price {
+  text-align: right;
+  font-weight: bold;
+  color: #303030;
+}
+
+.discount-price {
+  color: #7c7c7c;
+  font-size: 12px;
+  text-decoration: line-through; /* Gạch ngang cho giá gốc nếu có giảm giá */
+}
+
+/* Remove button styles */
+.remove-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+.remove-btn:hover {
+  color: #e60000;
+}
+
+/* Cart total styles */
+.cart-total {
+  display: flex;
+  flex-direction: column; /* Đặt hướng thành cột */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  border-top: 2px solid #ffd6d6; /* Đường viền trên */
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.total-row {
+  width: 100%;
+  display: flex; /* Sử dụng flexbox cho mỗi hàng */
+  justify-content: space-between; /* Căn giữa giữa nhãn và giá */
+  padding: 10px 0; /* Khoảng cách trên và dưới */
+  border-bottom: 1px solid #ddd; /* Đường viền dưới cho mỗi hàng */
+}
+
+.total-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.subtotal-price {
+  color: #333; /* Màu chữ cho giá */
+  font-weight: bold;
+
+}
+
+.final-total-price {
+  font-weight: bold;
+  color: #e60000;
+  font-size: 20px;
+}
+
+/* Cart buttons styles */
+.cart-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.checkout-btn,
+.clear-cart-btn {
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.checkout-btn {
+  background-color: #4CAF50;
+}
+
+.checkout-btn:hover {
+  background-color: #0a5f0d;
+}
+
+.clear-cart-btn {
+  background-color: #333;
+}
+
+.clear-cart-btn:hover {
+  background-color: #e60000;
+}
+
+/* Horizontal links styles */
+.horizontal-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.back-to-home,
+.continue {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}
+
+.back-to-home:hover,
+.continue:hover {
+  color: #c27676; /* Hover color */
+}
+
+.back-to-home {
+  text-align: left;
+}
+
+.continue {
+  text-align: right;
+}

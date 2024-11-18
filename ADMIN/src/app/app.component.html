@@ -1,0 +1,15 @@
+<div class="h-full w-full">
+  <app-header></app-header>
+  <div class="flex">
+    <div class="w-full" *ngIf="!isLoggedIn">
+      <app-admin-login (loginSuccess)="handleLoginSuccess()"></app-admin-login>
+    </div>
+    <div class="w-[200px]" *ngIf="isLoggedIn">
+      <app-admin-navbar (logoutEvent)="handleLogout()"></app-admin-navbar> <!-- Listen for logout event -->
+    </div>
+    <div class="w-full" *ngIf="isLoggedIn">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

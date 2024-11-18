@@ -1,0 +1,101 @@
+<div class="promotion-container">
+    <!-- Countdown Section with Fireworks Background -->
+    <div class="countdown-section">
+      <h2>Khuyến mãi đặc biệt từ Aura Beauty!</h2>
+      <p>Thời gian còn lại cho ưu đãi: {{ remainingTime }}</p>
+      <p>Hãy nhanh tay để nhận các ưu đãi độc quyền</p>
+      <div class="fireworks-overlay"></div>
+    </div>
+  
+    <section class="main-banner">
+      <div class="banner-content">
+        <h1>PRODUCT PROMOTION</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+        <a class="details-btn" href="#promo-cards">Read more...</a>
+      </div>
+      <div class="banner-image">
+        <img src="../../assets/images/Promotion/Loa.png" alt="Promotion Image">
+      </div>
+    </section>
+  
+    <!-- Promotion Cards Section -->
+    <section class="promo-cards" id="promo-cards">
+      <div class="promo-card">
+        <div class="card-icon">
+          <img src="../../assets/images/Promotion/Flashsale.png" alt="Cashback Icon">
+        </div>
+        <h3>FLASH SALE</h3>
+        <p>Flash Sale diễn ra hàng ngày vào các khung giờ vàng, mang đến cơ hội mua sắm với mức giá ưu đãi hấp dẫn. Trong mỗi khung giờ, hàng loạt sản phẩm được giảm giá sâu, giúp bạn dễ dàng săn đón các deal cực hời. Hãy sẵn sàng để không bỏ lỡ bất kỳ ưu đãi nào trong thời gian giới hạn này!</p>
+        <a class="details-btn" href="#flashsale">Details...</a>
+      </div>
+      <div class="promo-card">
+        <div class="card-icon">
+          <img src="../../assets/images/Promotion/Bestproduct.png" alt="Best Seller Icon">
+        </div>
+        <h3>BEST PRODUCT</h3>
+        <p>Sản phẩm tốt nhất của chúng tôi là sự kết hợp hoàn hảo giữa chất lượng vượt trội và giá cả phải chăng, đáp ứng nhu cầu đa dạng của khách hàng. Mỗi sản phẩm đều được lựa chọn kỹ lưỡng, đảm bảo mang lại trải nghiệm sử dụng tối ưu, bền bỉ và an toàn. Hãy khám phá ngay các dòng sản phẩm tốt nhất để tận hưởng sự hài lòng tuyệt đối trong từng chi tiết!</p>
+        <a class="details-btn" href="#bestproduct">Details...</a>
+      </div>
+      <div class="promo-card">
+        <div class="card-icon">
+          <img src="../../assets/images/Promotion/Bestoffer.png" alt="Special Offer Icon">
+        </div>
+        <h3>SPECIAL OFFER</h3>
+        <p>Chương trình ưu đãi đặc biệt đang chờ đón bạn! Hàng loạt sản phẩm với mức giảm giá cực sốc và quà tặng hấp dẫn chỉ có trong thời gian giới hạn. Đừng bỏ lỡ cơ hội sở hữu những sản phẩm chất lượng với giá ưu đãi đặc biệt – mua sắm ngay để nhận ngay deal hời!</p>
+        <a class="details-btn" href="#specialoffer">Details...</a>
+      </div>
+    </section>
+  
+    <!-- Vouchers Section -->
+    <div class="vouchers-section">
+      <h1 id="flashsale">FLASH SALE</h1>
+      <div class="flashsale-section">
+        <div class="hour-box">2h</div>
+        <div class="hour-box">5h</div>
+        <div class="hour-box">8h</div>
+        <div class="hour-box highlight">12h</div>
+        <div class="hour-box">15h</div>
+        <div class="hour-box">18h</div>
+        <div class="hour-box">20h</div>
+        <div class="hour-box highlight">24h</div>
+      </div>
+  
+  
+      <h1 id="bestproduct">BEST PRODUCT</h1>
+      <ul class="product-list">
+        <li *ngFor="let product of products" class="product-item">
+          <div class="best-seller-ribbon"></div>
+          <div class="product-details">
+            <div class="product-image">
+              <img [src]="product.image">
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+      <h1 id="specialoffer">SPECIAL OFFER</h1>
+      <ul class="voucher-list">
+        <li *ngFor="let voucher of vouchers" class="voucher-item">
+          <div class="best-deal-ribbon">Best Deal</div>
+          <div class="voucher-content">
+            <div class="voucher-logo">AuraBeauty</div>
+            <div class="voucher-details">
+              <p><strong>{{ voucher.discount }}</strong></p>
+              <p>{{ voucher.description }}</p>
+              <p>Hiệu lực: {{ voucher.expirationDate }}</p>
+              <button class="save-button" (click)="saveVoucher(voucher.code)">
+                {{ voucher.isSaved ? 'Đã lưu' : 'Lưu Voucher' }} <!-- Thay đổi nội dung nút -->
+              </button>
+            </div>
+          </div>
+        </li>      
+      </ul>
+    </div>
+  
+    <div class="cta-banner">
+      <p>Đừng bỏ lỡ cơ hội! <a routerLink="/aboutus">Tìm hiểu thêm</a> hoặc <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4002/aboutus" target ="_blank">Chia sẻ cùng bạn bè</a></p>
+      <p>Liên hệ với chúng tôi để nhận tư vấn miễn phí và các ưu đãi mới nhất!</p>
+    </div>
+  
+  </div>
+  

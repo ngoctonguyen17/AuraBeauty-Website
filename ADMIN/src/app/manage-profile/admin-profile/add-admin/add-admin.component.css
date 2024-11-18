@@ -1,0 +1,38 @@
+/* user-detail.component.css */
+
+
+.user-detail-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tùy chọn: Để nội dung nằm giữa theo chiều cao của trang */
+}
+
+
+.user-detail-container h2 {
+  color: #333;
+}
+
+
+.user-detail-container p {
+  margin: 10px 0;
+}
+
+
+.user-detail-container strong {
+  font-weight: bold;
+}
+
+
+
+
+

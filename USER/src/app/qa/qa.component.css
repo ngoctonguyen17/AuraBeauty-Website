@@ -1,0 +1,295 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+    color: #e03f3f; /* Màu cho tiêu đề chính */
+}
+
+h2 {
+    color: #c27676;
+    font-size: 1.9em; /* Kích thước tiêu đề phụ */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+    color: #333; /* Màu chữ cho nội dung */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+    background-color: #f8a5b8;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto; /* Rút ngắn margin-top và viết gọn margin */
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    width: 90%; /* Thêm width để container không quá sát viền khi màn hình lớn */
+}
+
+/* Enhanced Aside Styles */
+.sidebar {
+    width: 250px;
+    background-color: #f2cece;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.trail-effect {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #f8a5b8 0%, transparent 70%);
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.mailbox {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f8a5b8;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.mailbox::before {
+    content: "✉";
+    font-size: 20px;
+}
+
+/* Enhanced Main Content Styles */
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.qa-section h2 {
+    color: #f8a5b8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f8a5b8;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.qa-section h2:hover {
+    transform: translateX(10px);
+}
+
+.qa-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.qa-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(248, 165, 184, 0.2);
+    border-color: #f8a5b8;
+    background-color: rgba(248, 165, 184, 0.05);
+}
+
+.qa-question {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.qa-question::before {
+    content: "Q:";
+    position: absolute;
+    left: 0;
+    color: #f8a5b8;
+    font-weight: 700;
+}
+
+.qa-item:hover .qa-question {
+    color: #f8a5b8;
+}
+
+.qa-answer {
+    color: #666;
+    line-height: 1.8;
+    padding-left: 25px;
+    position: relative;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.qa-answer::before {
+    content: "A:";
+    position: absolute;
+    left: 0;
+    color: #f8a5b8;
+    font-weight: 700;
+}
+
+.qa-item:hover .qa-answer {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Tăng width trên mobile */
+        margin: 30px auto; /* Giảm margin trên mobile */
+        gap: 15px; /* Giảm khoảng cách giữa các phần tử */
+    }
+}
+
+/* Container styles */
+.aside-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.aside-title {
+    color: #f8a5b8;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.aside-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Interaction area styles */
+.interaction-area {
+    position: relative;
+    height: 0 auto;
+    border: 2px dashed #f8a5b8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: rgba(248, 165, 184, 0.05);
+    overflow: hidden;
+}
+
+.hint-text {
+    font-size: 0.9rem;
+    color: #888;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.interaction-area:hover .hint-text {
+    opacity: 0;
+}
+
+/* Trail effect styles */
+.trail-effect {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.trail {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(248, 165, 184, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(248, 165, 184, 0.3);
+}
+
+/* Mailbox styles */
+.mailbox {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(248, 165, 184, 0.2);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mailbox::before {
+    content: '📧';
+    font-size: 20px;
+}
+
+/* Animation keyframes */
+@keyframes trailFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes mailboxAppear {
+    0% {
+        transform: scale(0) rotate(-20deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}

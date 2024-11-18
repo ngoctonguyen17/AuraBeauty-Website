@@ -1,0 +1,59 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<div>
+  <header class="header">
+    <div class="top-bar">
+      <span>Free shipping on orders over <strong>500.000đ</strong>!</span>
+    </div>
+
+    <div class="logo-navigation">
+      <a class="logo" routerLink="/home">
+        <img src="../../assets/images/Logo/Logo-text-TrangDen.png" alt="AuraBeauty"/>
+      </a>
+      <nav class="menu">
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/aboutus">About AuraBeauty</a></li>
+          <!-- Product Menu with Sub-menu -->
+          <li>
+            <a routerLink="/product">Product</a>
+            <ul class="submenu">
+              <li><a routerLink="/product/Haircare">Haircare</a></li>
+              <li><a routerLink="/product/Bodycare">Bodycare</a></li>
+              <li><a routerLink="/product/skincare">Skincare</a></li>
+              <li><a routerLink="/product/makeup">Makeup</a></li>
+            </ul>
+          </li>
+          <li><a routerLink="/">Promotion</a></li>
+          <li>
+            <a href="#">Aura Blog</a>
+            <ul class="submenu">
+              <li><a routerLink="/blog/tips">Beauty Tips</a></li>
+              <li><a routerLink="/blog/news">News</a></li>
+            </ul>
+          </li>
+          <li><a routerLink="/">Q & A</a></li>
+          <li><a routerLink="/contactus">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="#" class="icon-search"><i class="fa fa-search"></i></a>
+<<<<<<< HEAD
+        <a routerLink="/cart" class="icon-cart"><i class="fa fa-shopping-cart"></i></a>
+        <a routerLink="/login" class="icon-user"><i class="fa fa-user"></i></a>
+=======
+        <a href="#" class="icon-cart"><i class="fa fa-shopping-cart"></i></a>
+        <a class="icon-user"><i class="fa fa-user" (click)="openUser()"></i></a>
+>>>>>>> 71a25a2b1a7ef31880c7128ba1b362c9c323a2e4
+      </div>
+    </div>
+  </header>
+</div>
