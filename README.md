@@ -11,8 +11,8 @@ Aura Beauty is a cosmetic website dedicated to offering high-quality beauty prod
 
 ## ⚙️ Technologies Used
 - **Frontend:** Angular
-- ****Backend:** Node.js (MongoDB)
-- Styling:** CSS (Tailwind)
+- **Backend:** Node.js (MongoDB)
+- **Styling:** CSS (Tailwind)
 
 ## 📑 Project Structure 
 - **ADMIN:** Admin interface and management functionalities.
