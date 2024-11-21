@@ -2,7 +2,7 @@
 
 **IT'S A PROJECT IN A BUSINESS WEBSITE DEVELOPMENT COURSE, NOT A REAL BUSINESS.**
 
-Aura Beauty is a cosmetic website dedicated to offering high-quality beauty products to its customers. The platform is designed to provide a seamless shopping experience, featuring a wide range of cosmetics, skincare, and beauty accessories tailored to various needs and preferences.
+Aura Beauty is a cosmetic website dedicated to offering high-quality beauty products to its customers. The platform is designed to provide a seamless shopping experience, featuring a wide range of cosmetics, skincare, and beauty accessories tailored to various needs and preferences. This is a website built by **Ngoc To, Kieu Anh, Thanh Huyen, Hoang Kim,** and **Thu Huong.**
 
 **Features**
 - User Module: Online shopping experience, including product browsing, cart management, and checkout.
