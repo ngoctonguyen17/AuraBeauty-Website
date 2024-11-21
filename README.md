@@ -1,0 +1,1 @@
+AuraBeauty is a web-based platform designed for managing an e-commerce website specializing in cosmetics. The project incorporates Node.js and Angular to build robust and scalable solutions for both users and administrators.
